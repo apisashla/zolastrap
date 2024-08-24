@@ -1,0 +1,37 @@
+{% macro render(page) %}
+{% if page.toc %}
+
+<div class="float-end" style="padding-left: 1rem; padding-bottom: 1rem;">
+    <div class="list-group list-group-flush container-item">
+        
+        <h3 class="list-group-item">Table Of Contents</h3>
+
+        {% for h1 in page.toc %}
+        <a class="list-group-item list-group-item-action" href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+        {% if h1.children %}
+        <div class="list-group">
+            {% for h2 in h1.children %}
+            <a class="list-group-item list-group-item-action" href="{{ h2.permalink | safe }}">
+                <p style="padding-left: 1rem;">
+                    {{ h2.title }}
+                </p>
+            </a>
+            {% if h2.children %}
+            <div class="list-group" >
+                {% for h3 in h2.children %}
+                <a class="list-group-item list-group-item-action" href="{{ h3.permalink | safe }}">
+                    <p style="padding-left: 2rem;">
+                        {{ h3.title }}
+                    </p>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% endmacro %}
