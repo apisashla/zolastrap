@@ -20,11 +20,22 @@
 </p>
 {% endif %}
 
-{{ toc::render(page=page) }}
 
 <div class="content">
-  {{page.content | safe}}
+  <div class="container">
+    <div class="float-end">
+      {{ toc::render(page=page) }}
+    </div>
+
+    <div class="">
+      {{page.content | safe}}
+    </div>
+    
+
+  </div>
 </div>
+  
+
 {% for author_slug in page.taxonomies.authors | default(value=[]) %}
 {{authorbox::render(author_slug=author_slug)}}
 {% endfor %}
