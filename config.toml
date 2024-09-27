@@ -4,12 +4,12 @@ default_language = "en"
 compile_sass = true
 title = "Zolastrap"
 description = "A Bootstrap theme for Zola"
-generate_feed = false
+generate_feeds = false
 output_dir = "docs"
 
 taxonomies = [
-  {name = "tags", paginate_by = 5},
-  {name = "authors", paginate_by = 5},
+  { name = "tags", paginate_by = 5 },
+  { name = "authors", paginate_by = 5 },
 ]
 
 build_search_index = true
@@ -32,18 +32,18 @@ tag = 'Posts by Topic'
 tags = 'Posts by Topics'
 
 links = [
-	{title = 'Articles', url = 'articles'},
-  {title = 'Authors', url = 'authors'},
-	{title = 'About', url = 'about'},
-	{title = 'Topics', url = 'tags'},
-	{title = 'Github', url = 'https://github.com/marcodpt/zolastrap'},
+  { title = 'Articles', url = 'articles' },
+  { title = 'Authors', url = 'authors' },
+  { title = 'About', url = 'about' },
+  { title = 'Topics', url = 'tags' },
+  { title = 'Github', url = 'https://github.com/marcodpt/zolastrap' },
 ]
 email = "user@mail.com"
 icons = [
-  {title = 'Facebook', icon = 'facebook-f', url = 'https://www.facebook.com'},
-  {title = 'Instagram', icon = 'instagram', url = 'https://www.instagram.com'},
-  {title = 'Twitter', icon = 'twitter', url = 'https://twitter.com'},
-  {title = 'YouTube', icon = 'youtube', url = 'https://www.youtube.com'}
+  { title = 'Facebook', icon = 'facebook-f', url = 'https://www.facebook.com' },
+  { title = 'Instagram', icon = 'instagram', url = 'https://www.instagram.com' },
+  { title = 'Twitter', icon = 'twitter', url = 'https://twitter.com' },
+  { title = 'YouTube', icon = 'youtube', url = 'https://www.youtube.com' },
 ]
 
 utterances = ""
@@ -78,7 +78,7 @@ data_themes = [
   'united',
   'vapor',
   'yeti',
-  'zephyr'
+  'zephyr',
 ]
 data_schemes = [
   'dark',
